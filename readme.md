@@ -1,0 +1,1 @@
+Documenting my Typescript codically😁😁
