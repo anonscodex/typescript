@@ -65,3 +65,39 @@ function printMyResult(result) {
 }
 printMyResult(90);
 printMyResult("A");
+function totalNumber() {
+    return 2;
+}
+console.log(totalNumber());
+function greetMe() {
+    console.log("Hello Anons");
+}
+function multiply(a, b) {
+    return a * b;
+}
+console.log(multiply(2, 3));
+function add(a, b, c) {
+    return a + b + (c || 0);
+}
+console.log(add(3, 3));
+console.log(add(3, 3, 4));
+function power(a, b) {
+    if (b === void 0) { b = 3; }
+    return Math.pow(a, b);
+}
+console.log(power(2));
+function divide(_a) {
+    var dividend = _a.dividend, divisor = _a.divisor;
+    return dividend / divisor;
+}
+console.log(divide({ dividend: 10, divisor: 2 }));
+function addition(a, b) {
+    var rest = [];
+    for (var _i = 2; _i < arguments.length; _i++) {
+        rest[_i - 2] = arguments[_i];
+    }
+    return a + b + rest.reduce(function (y, z) { return y + z; }, 0);
+}
+console.log(addition(1, 2, 3, 4, 5, 6, 7, 8, 9));
+var negationFunc = function (value) { return value * -1; };
+console.log(negationFunc(2000));
