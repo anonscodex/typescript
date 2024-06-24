@@ -161,3 +161,26 @@ console.log((<string>x2).length)
 
 let x3 = "Awesome"
 console.log(((x3 as unknown) as string).length)
+
+//class Person {
+//    names:string;
+//}
+
+//const person = new Person();
+//person.names = "Anons"
+
+//console.log(person)
+
+class Person1 {
+    private name:string;
+    public constructor (name : string) {
+        this.name = name
+    }
+
+    public getName() : string {
+        return this.name
+    }
+}
+
+const person1 = new Person1("Anonymous");
+console.log(person1.getName())

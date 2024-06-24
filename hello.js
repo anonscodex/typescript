@@ -107,3 +107,20 @@ var x2 = 'how are you?';
 console.log(x2.length);
 var x3 = "Awesome";
 console.log(x3.length);
+//class Person {
+//    names:string;
+//}
+//const person = new Person();
+//person.names = "Anons"
+//console.log(person)
+var Person1 = /** @class */ (function () {
+    function Person1(name) {
+        this.name = name;
+    }
+    Person1.prototype.getName = function () {
+        return this.name;
+    };
+    return Person1;
+}());
+var person1 = new Person1("Anonymous");
+console.log(person1.getName());
