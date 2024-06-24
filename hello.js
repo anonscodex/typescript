@@ -101,3 +101,9 @@ function addition(a, b) {
 console.log(addition(1, 2, 3, 4, 5, 6, 7, 8, 9));
 var negationFunc = function (value) { return value * -1; };
 console.log(negationFunc(2000));
+var x1 = 'hello';
+console.log(x1.length);
+var x2 = 'how are you?';
+console.log(x2.length);
+var x3 = "Awesome";
+console.log(x3.length);

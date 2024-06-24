@@ -152,3 +152,12 @@ console.log(addition(1,2,3,4,5,6,7,8,9))
 type negation = (value:number) => number ;
 const negationFunc: negation = (value) => value * -1
 console.log(negationFunc(2000))
+
+let x1: unknown = 'hello'
+console.log((x1 as string).length)
+
+let x2 : unknown = 'how are you?'
+console.log((<string>x2).length)
+
+let x3 = "Awesome"
+console.log(((x3 as unknown) as string).length)
