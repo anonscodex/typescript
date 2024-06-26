@@ -212,3 +212,39 @@ class NamedValue<T> {
 let value = new NamedValue<number>('myNumber');
 value.setValue(10);
 console.log(value.toString());
+
+interface Persons {
+  name: string;
+  age: number;
+}
+// `keyof Person` here creates a union type of "name" and "age", other strings will not be allowed
+function printPersonProperty(persons: Persons, property: keyof Persons) {
+  console.log(`Printing person property ${property}: "${persons[property]}"`);
+}
+let persons = {
+  name: "Max",
+  age: 27
+};
+printPersonProperty(persons, "name"); 
+
+interface House {
+  sqft: number;
+  yard?: {
+    sqft: number;
+  };
+}
+function printYardSize(house: House) {
+  const yardSize = house.yard?.sqft;
+  if (yardSize === undefined) {
+    console.log('No yard');
+  } else {
+    console.log(`Yard is ${yardSize} sqft`);
+  }
+}
+
+let home: House = {
+  sqft: 500
+  
+};
+
+printYardSize(home); // Prints 'No yard'

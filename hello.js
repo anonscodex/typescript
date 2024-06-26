@@ -146,3 +146,26 @@ var NamedValue = /** @class */ (function () {
 var value = new NamedValue('myNumber');
 value.setValue(10);
 console.log(value.toString());
+// `keyof Person` here creates a union type of "name" and "age", other strings will not be allowed
+function printPersonProperty(persons, property) {
+    console.log("Printing person property ".concat(property, ": \"").concat(persons[property], "\""));
+}
+var persons = {
+    name: "Max",
+    age: 27
+};
+printPersonProperty(persons, "name");
+function printYardSize(house) {
+    var _a;
+    var yardSize = (_a = house.yard) === null || _a === void 0 ? void 0 : _a.sqft;
+    if (yardSize === undefined) {
+        console.log('No yard');
+    }
+    else {
+        console.log("Yard is ".concat(yardSize, " sqft"));
+    }
+}
+var home = {
+    sqft: 500
+};
+printYardSize(home); // Prints 'No yard'
